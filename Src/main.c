@@ -68,6 +68,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	struct hdc1008_ctx hdc1_ctx;
 	int wait_ms;
+	float temperature, humidity;
 
   /* USER CODE END 1 */
 
@@ -104,6 +105,8 @@ int main(void)
 	  HAL_Delay(wait_ms);
 	  HAL_GPIO_WritePin(GPIOF, USERLED1_Pin, GPIO_PIN_RESET);
 	  HAL_Delay(wait_ms);
+
+	  hdc1008_read_temperature_and_humidity(&hdc1_ctx, &temperature, &humidity);
 	}
   /* USER CODE END WHILE */
 

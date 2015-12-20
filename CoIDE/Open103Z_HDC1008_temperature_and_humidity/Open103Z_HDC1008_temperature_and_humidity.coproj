@@ -79,14 +79,14 @@
     <File name="HAL/stm32f1xx_hal_tim.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_spi_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_crc.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.c" type="1"/>
-    <File name="HAL/stm32f1xx_hal_tim_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_rcc.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" type="1"/>
+    <File name="HAL/stm32f1xx_hal_tim_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" type="1"/>
     <File name="HAL/stm32f1xx_ll_sdmmc.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_rtc.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_dma.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" type="1"/>
     <File name="CMSIS" path="" type="2"/>
-    <File name="HAL/stm32f1xx_hal_sd.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.c" type="1"/>
     <File name="HAL/stm32f1xx_hal.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" type="1"/>
+    <File name="HAL/stm32f1xx_hal_sd.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.c" type="1"/>
     <File name="HAL/stm32f1xx_ll_usb.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_pcd.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_i2s.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c" type="1"/>
@@ -106,28 +106,28 @@
     <File name="HAL/stm32f1xx_hal_gpio.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_smartcard.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_usart.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c" type="1"/>
+    <File name="HAL/stm32f1xx_hal_i2c.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_pcd_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_pwr.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" type="1"/>
-    <File name="HAL/stm32f1xx_hal_i2c.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_eth.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_spi.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c" type="1"/>
-    <File name="User/stm32f1xx_hal_msp.c" path="../../Src/stm32f1xx_hal_msp.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_irda.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.c" type="1"/>
+    <File name="User/stm32f1xx_hal_msp.c" path="../../Src/stm32f1xx_hal_msp.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_rcc_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" type="1"/>
     <File name="User" path="" type="2"/>
     <File name="User/hdc1008.c" path="../../Src/hdc1008.c" type="1"/>
     <File name="HAL/mxconstants.h" path="../../Inc/mxconstants.h" type="1"/>
+    <File name="HAL/stm32f1xx_hal_sram.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_hcd.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.c" type="1"/>
     <File name="User/stm32f1xx_it.c" path="../../Src/stm32f1xx_it.c" type="1"/>
-    <File name="HAL/stm32f1xx_hal_sram.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_rtc_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_nand.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_iwdg.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c" type="1"/>
     <File name="Startup" path="" type="2"/>
     <File name="Startup/startup_stm32f103xe.s" path="../../Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xe.s" type="1"/>
+    <File name="HAL/stm32f1xx_hal_pccard.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_uart.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_nor.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.c" type="1"/>
-    <File name="HAL/stm32f1xx_hal_pccard.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c" type="1"/>
     <File name="HAL/stm32f1xx_hal_dac_ex.c" path="../../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c" type="1"/>
   </Files>
   <Bookmarks/>
