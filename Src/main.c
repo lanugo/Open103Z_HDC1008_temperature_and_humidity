@@ -35,6 +35,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "hdc1008.h"
+#include "serial_debug.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -86,12 +87,13 @@ int main(void)
   MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
+  _DBG("Init primary HDC\n");
   hdc1_ctx.hi2c = &hi2c1;
   hdc1_ctx.address = 0x40;
   if (!hdc1008_init(&hdc1_ctx)) {
-	  HAL_UART_Transmit(&huart1, (uint8_t*)"HDC 1 not found.\n", 17, 300);
+	  _DBG("HDC 1 not found.\n")
   } else {
-	  HAL_UART_Transmit(&huart1, (uint8_t*)"HDC 1 found.\n", 13, 300);
+	  _DBG("HDC 1 found.\n");
   }
 
   /* USER CODE END 2 */
@@ -106,7 +108,12 @@ int main(void)
 	  HAL_GPIO_WritePin(GPIOF, USERLED1_Pin, GPIO_PIN_RESET);
 	  HAL_Delay(wait_ms);
 
-	  hdc1008_read_temperature_and_humidity(&hdc1_ctx, &temperature, &humidity);
+	  if (!hdc1008_read_temperature_and_humidity(&hdc1_ctx, &temperature, &humidity)) {
+		  _DBG("Error reading hdc1008\n");
+	  } else {
+		  _DBF(temperature); _DBG("C, ");
+		  _DBF(humidity); _DBG("%\n");
+	  }
 	}
   /* USER CODE END WHILE */
 

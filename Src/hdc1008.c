@@ -15,17 +15,13 @@ static int hdc_read_register16(struct hdc1008_ctx *ctx, uint8_t reg, uint16_t *v
 {
 	uint8_t data[2];
 
-	if (HAL_I2C_Master_Transmit(ctx->hi2c, (ctx->address << 1), &reg, 1, I2C_WAIT_TIMEOUT) != HAL_OK) {
-		 HAL_UART_Transmit(&huart1, (uint8_t*)"1\n", 2, 300);
+	if (HAL_I2C_Master_Transmit(ctx->hi2c, (ctx->address << 1), &reg, 1, I2C_WAIT_TIMEOUT) != HAL_OK)
 		 return 0;
-	}
 
 	HAL_Delay(delay);
 
-	if (HAL_I2C_Master_Receive(ctx->hi2c, (ctx->address << 1), data, 2, I2C_WAIT_TIMEOUT) != HAL_OK) {
-		 HAL_UART_Transmit(&huart1, (uint8_t*)"2\n", 2, 300);
+	if (HAL_I2C_Master_Receive(ctx->hi2c, (ctx->address << 1), data, 2, I2C_WAIT_TIMEOUT) != HAL_OK)
 		 return 0;
-	}
 
 	*val = (data[0] << 8) | data[1];
 	return 1;
@@ -35,17 +31,13 @@ static int hdc_read_register32(struct hdc1008_ctx *ctx, uint8_t reg, uint32_t *v
 {
 	uint8_t data[4];
 
-	if (HAL_I2C_Master_Transmit(ctx->hi2c, (ctx->address << 1), &reg, 1, I2C_WAIT_TIMEOUT) != HAL_OK) {
-		 HAL_UART_Transmit(&huart1, (uint8_t*)"1\n", 2, 300);
+	if (HAL_I2C_Master_Transmit(ctx->hi2c, (ctx->address << 1), &reg, 1, I2C_WAIT_TIMEOUT) != HAL_OK)
 		 return 0;
-	}
 
 	HAL_Delay(delay);
 
-	if (HAL_I2C_Master_Receive(ctx->hi2c, (ctx->address << 1), data, 4, I2C_WAIT_TIMEOUT) != HAL_OK) {
-		 HAL_UART_Transmit(&huart1, (uint8_t*)"2\n", 2, 300);
+	if (HAL_I2C_Master_Receive(ctx->hi2c, (ctx->address << 1), data, 4, I2C_WAIT_TIMEOUT) != HAL_OK)
 		 return 0;
-	}
 
 	*val = (data[0] << 24) | (data[1] << 16) | (data[2] << 8) | data[3];
 	return 1;
