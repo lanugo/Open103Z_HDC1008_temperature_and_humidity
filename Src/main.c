@@ -34,7 +34,7 @@
 #include "stm32f1xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "hdc1008.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -66,8 +66,8 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+	struct hdc1008_ctx hdc1_ctx;
 	int wait_ms;
-	char *text = "Open103Z says hello world!\n";
 
   /* USER CODE END 1 */
 
@@ -85,6 +85,13 @@ int main(void)
   MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
+  hdc1_ctx.hi2c = &hi2c1;
+  hdc1_ctx.address = 0x40;
+  if (!hdc1008_init(&hdc1_ctx)) {
+	  HAL_UART_Transmit(&huart1, (uint8_t*)"HDC 1 not found.\n", 17, 300);
+  } else {
+	  HAL_UART_Transmit(&huart1, (uint8_t*)"HDC 1 found.\n", 13, 300);
+  }
 
   /* USER CODE END 2 */
 
@@ -94,9 +101,6 @@ int main(void)
 	while (1)
 	{
 	  HAL_GPIO_WritePin(GPIOF, USERLED1_Pin, GPIO_PIN_SET);
-
-	  HAL_UART_Transmit(&huart1, (uint8_t*)text, 27, 300);
-
 	  HAL_Delay(wait_ms);
 	  HAL_GPIO_WritePin(GPIOF, USERLED1_Pin, GPIO_PIN_RESET);
 	  HAL_Delay(wait_ms);
